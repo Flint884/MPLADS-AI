@@ -8,6 +8,7 @@ backend/.env
 *.sqlite3
 *.log
 *.tsbuildinfo
+~$*.pptx
 .venv/
 venv/
 __pycache__/
