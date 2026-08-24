@@ -1,0 +1,9 @@
+project_id,project_name,state,district,category,estimated_cost,sanctioned_amount,actual_expenditure,progress_percentage,status,expected_completion_date
+MPLADS-001030,Public Infrastructure Project - Manimajra - Phase 2,Chandigarh,Manimajra,Public Infrastructure,10743209.254466433,8877998.72081517,12989245.293564148,74.12666300977097,Delayed,2025-07-15T09:06:47.992158
+MPLADS-001035,Sanitation Project - Rourkela - Phase 1,Odisha,Rourkela,Sanitation,20578683.149418943,19519528.06070379,31149553.833578955,29.41716439335832,Not Started,2026-11-09T09:06:47.992230
+MPLADS-001075,Sanitation Project - Dibrugarh - Phase 1,Assam,Dibrugarh,Sanitation,36665047.705197416,31771597.49575468,48065982.9131001,26.6786517144749,Delayed,2025-06-03T09:06:47.992837
+MPLADS-001076,Water Supply Project - Itanagar - Phase 2,Arunachal Pradesh,Itanagar,Water Supply,35288461.61034378,29593979.71867693,53329393.3676712,14.516042949823959,Not Started,2027-08-22T09:06:47.992851
+MPLADS-001085,Public Infrastructure Project - Cuttack - Phase 3,Odisha,Cuttack,Public Infrastructure,38836173.721428156,41346650.098824345,53417266.47548028,49.81566725490448,Delayed,2025-11-07T09:06:47.992981
+MPLADS-001090,Sanitation Project - Belgaum - Phase 3,Karnataka,Belgaum,Sanitation,36702897.56474978,34850425.45471995,46269815.012590274,8.918568755058043,Delayed,2026-01-17T09:06:47.993065
+MPLADS-001122,Healthcare Project - Bhopal - Phase 3,Madhya Pradesh,Bhopal,Healthcare,21640519.189788736,24772739.843796287,34167902.05072928,40.63585439104924,Delayed,2026-04-30T09:06:47.993553
+MPLADS-001123,Sanitation Project - North Delhi - Phase 1,Delhi,North Delhi,Sanitation,43855029.87163502,41807537.299296655,68479369.26195052,82.9702426945935,Delayed,2025-06-28T09:06:47.993567

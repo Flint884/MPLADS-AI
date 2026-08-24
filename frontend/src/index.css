@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #050806;
+  color: #d1fae5;
+}
+
+h1, h2, h3, button, input, select, textarea { font-family: Georgia, 'Times New Roman', serif; }
+.surface-panel { @apply bg-black border border-emerald-900 shadow-sm rounded-xl; }
+.page-header-accent { @apply border-l-4 border-emerald-700 pl-5; }
+.eyebrow { @apply text-xs font-bold uppercase tracking-widest text-emerald-700; }
+.action-button { @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-semibold transition-all disabled:cursor-not-allowed disabled:opacity-50; }
+.action-button-primary { @apply bg-emerald-700 text-white hover:bg-emerald-800; }
+.action-button-secondary { @apply bg-neutral-950 text-emerald-100 hover:bg-emerald-950; }
+.action-button-danger { @apply border border-red-200 bg-red-50 text-red-700 hover:bg-red-100; }
+.metric-panel { @apply flex flex-col gap-2 rounded-xl border border-emerald-900 bg-black p-5 shadow-sm; }
+.metric-panel span { @apply text-xs font-semibold uppercase tracking-wide text-slate-500; }
+.metric-panel strong { @apply text-2xl font-bold text-slate-950; }
+.notice-success { @apply flex items-center gap-3 rounded-lg border border-emerald-200 bg-emerald-50 p-4 text-sm font-medium text-emerald-800; }
+.notice-error { @apply flex items-center gap-3 rounded-lg border border-emerald-800 bg-emerald-950 p-4 text-sm font-medium text-emerald-100; }
+.notice-info { @apply flex items-center gap-3 rounded-lg border border-emerald-800 bg-emerald-950 p-4 text-sm text-emerald-100; }
+
+/* Keep older page utilities inside the black and green palette. */
+.bg-white, .bg-gray-50, .bg-gray-100, .bg-gray-200, .bg-slate-50, .bg-blue-50, .bg-blue-100, .bg-green-50, .bg-green-100, .bg-yellow-50, .bg-yellow-100, .bg-orange-50, .bg-orange-100, .bg-red-50, .bg-red-100, .bg-purple-50, .bg-purple-100, .bg-emerald-50, .bg-emerald-100 { background-color: #050806 !important; }
+.bg-neutral-100, .bg-neutral-50 { background-color: #050806 !important; }
+.bg-blue-600, .bg-blue-700, .bg-green-600, .bg-emerald-600 { background-color: #047857 !important; }
+.bg-red-600, .bg-orange-600, .bg-purple-600 { background-color: #064e3b !important; }
+.text-gray-900, .text-gray-800, .text-gray-700, .text-gray-600, .text-gray-500, .text-slate-950, .text-slate-900, .text-slate-800, .text-slate-700, .text-slate-600, .text-slate-500 { color: #d1fae5 !important; }
+.text-blue-600, .text-blue-700, .text-blue-800, .text-green-600, .text-green-800, .text-emerald-700, .text-emerald-800, .text-orange-600, .text-orange-800, .text-red-600, .text-red-700, .text-red-800, .text-purple-600, .text-purple-800, .text-yellow-800 { color: #6ee7b7 !important; }
+.border-gray-200, .border-gray-300, .border-slate-200, .border-blue-100, .border-blue-200, .border-red-200 { border-color: #14532d !important; }
+.hover\:bg-gray-50:hover, .hover\:bg-gray-100:hover, .hover\:bg-blue-50:hover { background-color: #052e16 !important; }
+input, select, textarea { background-color: #050806; border-color: #166534; color: #d1fae5; }
+
+.sidebar {
+  @apply fixed left-0 top-0 h-screen w-64 bg-white shadow-lg z-40;
+}
+
+.main-content {
+  @apply ml-64 min-h-screen;
+}
+
+.page-header {
+  @apply bg-white shadow-sm px-6 py-4 mb-6;
+}
+
+.kpi-card {
+  @apply bg-white rounded-lg shadow p-6;
+}
+
+.badge {
+  @apply inline-block px-3 py-1 rounded-full text-sm font-medium;
+}
+
+.badge-low {
+  @apply bg-green-100 text-green-800;
+}
+
+.badge-medium {
+  @apply bg-yellow-100 text-yellow-800;
+}
+
+.badge-high {
+  @apply bg-orange-100 text-orange-800;
+}
+
+.badge-critical {
+  @apply bg-red-100 text-red-800;
+}
+
+.table-responsive {
+  @apply overflow-x-auto;
+}
+
+.btn {
+  @apply px-4 py-2 rounded-lg font-medium transition-colors;
+}
+
+.btn-primary {
+  @apply bg-blue-600 text-white hover:bg-blue-700;
+}
+
+.btn-secondary {
+  @apply bg-gray-200 text-gray-800 hover:bg-gray-300;
+}
+
+.btn-danger {
+  @apply bg-red-600 text-white hover:bg-red-700;
+}
+
+.section-title {
+  @apply text-2xl font-bold text-gray-900 mb-4;
+}
+
+.subsection-title {
+  @apply text-lg font-semibold text-gray-800 mb-3;
+}
