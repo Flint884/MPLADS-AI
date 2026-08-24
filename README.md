@@ -113,17 +113,49 @@ python -c "from app.ml.anomaly_detection import run_anomaly_detection; run_anoma
 
 ## API Endpoints
 
-- `GET /api/dashboard` - National dashboard metrics
-- `GET /api/projects` - List all projects
-- `GET /api/projects/{id}` - Project details
-- `POST /api/projects` - Create project
-- `GET /api/anomalies` - List anomalies
-- `POST /api/analysis/run` - Run anomaly detection
-- `GET /api/duplicate-detection` - Find duplicate projects
+The backend provides interactive API documentation at `http://localhost:8000/docs`.
+
+### Projects
+
+- `GET /api/projects` - List projects
+- `GET /api/projects/{id}` - Get project details
+- `POST /api/projects` - Create a project
+- `PUT /api/projects/{id}` - Update a project
+- `GET /api/projects/{id}/risk-assessment` - Get a project risk assessment
+
+### Anomalies and Analysis
+
+- `GET /api/anomalies` - List anomaly alerts
+- `GET /api/anomalies/{id}` - Get an anomaly alert
+- `PUT /api/anomalies/{id}` - Update an anomaly alert
+- `POST /api/analysis/run-anomaly-detection` - Run anomaly detection
+- `POST /api/analysis/run-risk-scoring` - Calculate risk scores
+- `POST /api/analysis/detect-duplicates` - Detect duplicate projects
+- `POST /api/analysis/detect-cost-overruns` - Detect cost overruns
+- `POST /api/analysis/detect-low-progress` - Detect low-progress projects
+- `POST /api/analysis/run-full-analysis` - Run the complete analysis pipeline
+
+### Analytics and Reports
+
+- `GET /api/analytics/dashboard` - National dashboard metrics
 - `GET /api/analytics/states` - State-wise analytics
-- `GET /api/analytics/districts` - District-wise analytics
-- `POST /api/data/import` - Import data from CSV
-- `GET /api/data/demo` - Get demo dataset info
+- `GET /api/analytics/districts/{state}` - District analytics
+- `GET /api/analytics/fund-utilization-trend` - Fund utilization trend
+- `GET /api/analytics/project-status-distribution` - Project status distribution
+- `GET /api/analytics/risk-distribution` - Risk distribution
+- `GET /api/reports/high-risk-projects` - High-risk projects report
+- `GET /api/reports/delayed-projects` - Delayed projects report
+- `GET /api/reports/cost-overrun-projects` - Cost overrun report
+- `GET /api/reports/compliance-report` - Compliance report
+- `GET /api/reports/export-csv` - Export a report as CSV
+
+### Data Management
+
+- `GET /api/data/demo` - Get demo dataset information
+- `POST /api/data/generate-demo` - Generate demo data
+- `POST /api/data/import-csv` - Import project data from CSV
+- `DELETE /api/data/clear-all` - Clear application data
+- `GET /api/health` - Check API health
 
 ## User Roles
 
@@ -165,6 +197,63 @@ npm run dev                          # Start dev server
 npm run build                        # Production build
 npm run preview                      # Preview production build
 ```
+
+## Testing
+
+Run the frontend production build to check TypeScript and Vite compilation:
+
+```bash
+cd frontend
+npm run build
+```
+
+Check that the backend is healthy:
+
+```bash
+curl http://localhost:8000/api/health
+```
+
+The API also provides interactive documentation at `http://localhost:8000/docs`.
+
+## Troubleshooting
+
+### Port 8000 is already in use
+
+Stop the process using port 8000, or start FastAPI on another port:
+
+```bash
+cd backend
+python -m uvicorn app.main:app --port 8001 --reload
+```
+
+### Frontend dependencies are missing
+
+Install them before building or starting the frontend:
+
+```bash
+cd frontend
+npm install
+```
+
+### Database or demo data needs to be reset
+
+Remove the local SQLite database and generate fresh demo data:
+
+```bash
+cd backend
+Remove-Item mplads.db -ErrorAction SilentlyContinue  # Windows PowerShell
+python -m app.seeds.demo_data
+```
+
+## Deployment Notes
+
+For local or single-server deployment, build the frontend and run the FastAPI application from the project root. The backend serves the compiled frontend from `frontend/dist` when that directory exists. Before deploying, set production values in `backend/.env`, use a production database such as PostgreSQL when required, and disable API reload mode.
+
+## Repository
+
+Source code and project updates are maintained at:
+
+https://github.com/Flint884/MPLADS-AI
 
 ## License
 
