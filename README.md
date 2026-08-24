@@ -2,7 +2,9 @@
 
 **AI-Powered Anomaly, Fraud and Inefficiency Detection System for MPLADS Scheme Implementation**
 
-A comprehensive full-stack application for monitoring and analyzing Members of Parliament Local Area Development Scheme (MPLADS) projects using artificial intelligence, machine learning, and advanced analytics.
+MPLADS Sentinel AI is a full-stack monitoring platform for analyzing Members of Parliament Local Area Development Scheme (MPLADS) projects. It combines transparent risk scoring, anomaly detection, project analytics, and investigation workflows in one place.
+
+The application includes fictional demonstration data and is intended for evaluation and development use. AI results are decision-support indicators and always require review by authorized officials.
 
 ## Features
 
@@ -63,6 +65,12 @@ project/
 ```
 
 ## Installation & Setup
+
+### Quick Start on Windows
+
+From the project directory, double-click `START_APP.cmd`. The launcher builds the frontend, starts the FastAPI backend, and opens the application at `http://127.0.0.1:8000`.
+
+For a manual setup, use the following steps.
 
 ### Prerequisites
 - Python 3.9+
